@@ -67,6 +67,8 @@ function nextPrev(isNext){
 
 let autoPlay = setInterval(nextPrev, 3000) 
 
+
+//aggiunta mouseover e mouseout
 slider.addEventListener(`mouseover`, function(){
   clearInterval(autoPlay);
 });
@@ -86,6 +88,8 @@ function refresh(){
 
 
 //quando pigio START il bottone le immagini iniziano a scorrere
+
+
 
 
 
