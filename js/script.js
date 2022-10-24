@@ -8,11 +8,15 @@ const slider = document.querySelector('.slider');
 const thumbs = document.querySelector('.thumbs');
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
+const startBtn = document.querySelector(`#start`);
+const stopBtn = document.querySelector(`#stop`);
 
 const numImages = 5;
 let counterImages = 0;
 let sliderHtml = '';
 let thumbsHtml = '';
+let clickStart;
+let clickStop;
 
 for(let i = 1; i <= numImages; i++){
   sliderHtml += `
@@ -62,4 +66,21 @@ function nextPrev(isNext){
 //far scorrere in automatico il carousel
 
 const autplay = setInterval(nextPrev, 3000) 
+
+//quando pigio START il bottone le immagini iniziano a scorrere
+startBtn.addEventListener(`click`, function(){
+  clickStart = setInterval(function(){
+    counterImages++;
+    (slider, counterImages)
+  }, 2000)
+})
+
+
+//quando pigio il bottone STOP le immagini si fermano
+
+stopBtn.addEventListener(`click`, function(){
+  clearInterval(clickOne)
+})
+
+
 
