@@ -73,10 +73,6 @@ slider.addEventListener(`mouseover`, function(){
 
 slider.addEventListener(`mouseout`, refresh);
 
-function refresh(){
-  autoPlay = setInterval(nextPrev, 3000)
-}
-
 thumbs.addEventListener(`mouseover`, function(){
   clearInterval(autoPlay);
 });
