@@ -35,6 +35,7 @@ body{
   object-fit: cover;
   display: none;
   border: 10px solid white;
+  cursor: pointer;
 }
 
 .slider img.active{
@@ -48,6 +49,7 @@ body{
   width: 135px;
   height: 100%;
   background-color: black;
+  cursor: pointer;
 }
 
 
@@ -121,5 +123,9 @@ button{
 }
 
 #stop{
+  background-color: red;
+}
+
+.red{
   background-color: red;
 }

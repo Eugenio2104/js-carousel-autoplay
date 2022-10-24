@@ -65,22 +65,31 @@ function nextPrev(isNext){
 
 //far scorrere in automatico il carousel
 
-const autplay = setInterval(nextPrev, 3000) 
+let autoPlay = setInterval(nextPrev, 3000) 
+
+slider.addEventListener(`mouseover`, function(){
+  clearInterval(autoPlay);
+});
+
+slider.addEventListener(`mouseout`, refresh);
+
+function refresh(){
+  autoPlay = setInterval(nextPrev, 3000)
+}
+
+thumbs.addEventListener(`mouseover`, function(){
+  clearInterval(autoPlay);
+});
+
+thumbs.addEventListener(`mouseout`, refresh);
+
+function refresh(){
+  autoPlay = setInterval(nextPrev, 3000)
+}
+
+
 
 //quando pigio START il bottone le immagini iniziano a scorrere
-startBtn.addEventListener(`click`, function(){
-  clickStart = setInterval(function(){
-    counterImages++;
-    (slider, counterImages)
-  }, 2000)
-})
-
-
-//quando pigio il bottone STOP le immagini si fermano
-
-stopBtn.addEventListener(`click`, function(){
-  clearInterval(clickOne)
-})
 
 
 
