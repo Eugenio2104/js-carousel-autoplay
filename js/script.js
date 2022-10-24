@@ -58,14 +58,8 @@ function nextPrev(isNext){
   
 }
 
-let autoPlay = setInterval(nextPrev(){
-  counterImages++;
-  nextPrev(counterImages);
-  if(counterImages === numImages){
-    clearInterval(autoPlay);
-  }
-}, 1000);
 
-  
+//far scorrere in automatico il carousel
 
+const autplay = setInterval(nextPrev, 3000) 
 
